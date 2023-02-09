@@ -1,0 +1,307 @@
+.App{
+	background-color: white;
+}
+body{
+	width: 100vw;
+	padding: 50px 20px;
+	
+}
+.container{
+	display: flex;
+
+}
+.leftContent{
+	padding-left: 40px;
+	width: 30%;
+}
+.leftContent h1{
+	font-size: 35px;
+	font-weight: 500;
+}
+.leftContent p{
+	font-size: 25px;
+	font-weight: 300;
+}
+.profile_text{
+	display: flex;
+	flex: 1;
+}
+.profile_text p{
+	width: 80%;
+	margin-bottom: 45px;
+	font-weight: 200;
+	font-size: 18px;
+}
+.profile_text ul{
+	margin-bottom: 45px;
+}
+.profile_text ul li{
+	font-weight: 300;
+	font-family: 'Roboto',sans-serif;
+	display: inline-block;
+	line-height: 30px;
+	margin-right: 20px;
+}
+.profile_text ul li span{
+	margin-left: 5px;
+	font-size: 13px;
+	font-weight: 300;
+}
+.profile_text  ul.skill li::before{
+	content: "•";
+	margin-right: 3px;
+}
+.profile_text ul.contact li {
+	margin-top: 10px;
+	
+}
+.profile_text ul.contact a:hover{
+	opacity: 0.5;
+	
+	transition: 0.2s;
+}
+.profile_text ul li img{
+	margin-right: 5px;
+	align-items: center;
+	justify-content: center;
+	width: 18px;
+}
+
+.profileimg{
+	margin-top: 30px;
+	margin-bottom: 50px;
+	box-shadow: 0 0 10px rgba(0, 0, 0,0.3);
+	width:200px;
+	height:200px;
+	object-fit: fill;
+	background-image: url(../public/image/profile_img.jpg);
+	background-position: -40px -90px;
+	background-size:270px;
+	border-radius: 100%;
+}
+.profile_text h1{
+	font-size: 25px;
+	font-weight: 400;
+
+}
+
+.rightContent{
+	flex: 1;
+	display: flex;
+	height: 85vh;
+	background-color: rgb(245, 245, 245);
+	border-radius: 10px;
+	margin-top: 15px;
+}
+
+h1 span{
+	font-size: 25px;
+}
+.menubar{
+	font-family: 'Roboto',sans-serif;
+	width: 250px;
+	height: 100%;
+	border-radius: 10px 0px 0px 10px;
+	background-color: rgb(225, 223, 225);
+}
+.menucontainer{
+	background-color: rgb(225, 223, 225);
+	display: flex;
+	padding:10px 30px;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	border-radius: 10px;
+}
+p#favor{
+	margin-top: 10px;
+	margin-left: 30px;
+	font-weight: 500;
+	color: rgb(129, 129, 129);
+}
+.choice{
+	color: #555555;
+
+	cursor: pointer;
+	font-family: 'Roboto',sans-serif;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	font-weight: 400;
+	margin-bottom: 15px;
+	font-size: 14px;
+	
+	
+}
+.active{
+	background-color: rgba(80, 80, 80, 0.3);
+	border-radius: 5px;
+	height: 30px;
+	padding: 5px;
+	transition: 0.2s ease-in;
+}
+.choice img{
+	width: 18px;
+	margin-right: 8px;
+}
+
+@keyframes fade_in {
+	from{opacity: 0;}
+	to {opacity: 1;}
+	
+}
+.test{
+	animation: fade_in 1s;
+}
+.workshop{
+	
+	flex:1;
+	height: 150px;
+	padding: 10px;
+	display: grid;
+	grid-template-columns: repeat(auto-fill,minmax(100px,1fr));
+	gap: 0 20px;
+	
+}
+.workshop img{
+	width: 100px;
+}
+img.git_logo{
+	width: 40px;
+	opacity: 0.3;
+	
+}
+
+.workshop img:hover  {
+	transition: 0.5s;
+	opacity: 0.5;
+}
+.workshop span{
+	font-family: 'Roboto',sans-serif;
+	font-weight: 300;
+	font-size: 15px;
+}
+.wrk1{
+	height: 150px;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100px;
+}
+
+@media screen and (max-width: 400px) {
+	.profileimg{
+		width: 250px;
+		height: 250px;
+		
+		background-size: 300px;
+		border-radius: 100%;
+		align-items: center;
+		justify-content: center;
+	}
+    .leftContent{
+		width: 100%;
+		
+	}
+	.rightContent{
+		height: 100vh;
+	
+	}
+	.container{
+		display: block;
+	}
+	.menubar{
+		width: 70%;
+	}
+	.menucontainer{
+		padding: 5px 20px;
+	}
+	.menucontainer p{
+		visibility: hidden ;
+	}
+	.choice{
+		margin-right: 15px;
+		margin-bottom: 10px;
+	}
+	.choice img{
+		margin: 0;
+	}
+	.active{
+		margin-left: 15px;
+		height: 30px;
+		width:30px;
+		transition: none;
+	}
+	p#favor{
+		visibility: hidden;
+	}
+	.close_bar{
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+	}
+	.workpanel{
+		width: 20%;
+	}
+	
+}
+
+@media screen and (max-width: 900px) {
+	.profileimg{
+		width: 270px;
+		margin-left: 5px;
+		height: 270px;
+		background-size: 300px;
+		border-radius: 100%;
+		align-items: center;
+		justify-content: center;
+	}
+	.leftContent{
+		width: 100%;
+		
+	}
+	.rightContent{
+		height: 50vh;
+	
+	}
+	.container{
+		display: block;
+	}
+	.menubar{
+		width: 70%;
+	}
+	.menucontainer{
+		padding: 5px 20px;
+	}
+	.menucontainer p{
+		visibility: hidden ;
+	}
+	.choice{
+		margin-right: 15px;
+		margin-bottom: 10px;
+	}
+	.choice img{
+		margin: 0;
+	}
+	.active{
+		margin-left: 15px;
+		height: 30px;
+		width:30px;
+		transition: none;
+	}
+	p#favor{
+		visibility: hidden;
+	}
+	.close_bar{
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+	}
+	.workpanel{
+		width: 20%;
+	}
+}
+
+
+

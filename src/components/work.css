@@ -1,0 +1,267 @@
+@keyframes slidein {
+  from {
+    right: -1000px;
+  }
+  to {
+    right: 0;
+  }
+}
+@keyframes slideout {
+  from {
+    right: 0;
+  }
+  to {
+    right: -1000px;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opatity: 0.5;
+    visibility: visible;
+  }
+}
+@keyframes fadeout {
+  from {
+	box-shadow: -10px 0 20px rgba(0, 0, 0, 0.2);
+    opacity: 0.5;
+	
+  }
+  to {
+	box-shadow: 0px 0 0px rgba(0, 0, 0, 0);
+    opatity: 0;
+    visibility: hidden;
+  }
+}
+.fadein {
+  animation: fadein 1s forwards;
+}
+.fadeout {
+  animation: fadeout 1s forwards;
+  
+}
+.slidein {
+  animation: slidein 1s ease forwards ;
+}
+.slideout {
+  animation: slideout 1s ease-out forwards ;
+}
+.wrk1{
+	cursor: pointer;
+}
+
+.offcanva1 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 700px;
+  height: 100vh;
+  background-color: white;
+  box-shadow: -10px 0 20px rgba(0, 0, 0, 0.2);
+}
+.offcanva1 span {
+	cursor: pointer;
+ 	right: 0;
+}
+.blackpage {
+  visibility: hidden;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: black;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+} 
+.close_btn{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 10px;
+	width: 20px;
+	height: 20px;
+	background-color: #FF605C;
+	border-radius: 100%;
+}
+.close_btn .close_text {
+	color: #911a18;
+	margin-bottom: 5px;
+	opacity: 0;
+	transition: 0.1s;
+}
+.close_btn:hover .close_text{
+	opacity: 1;
+	
+}
+.info{
+	margin-top: 15px;
+	margin-left: 10px;
+	
+}
+.ui_info{
+	
+	width: 700px;
+	
+	display: flex;
+	flex: 5;
+	align-items: center;
+}
+.ui_info p{
+	
+	font-family:'Roboto', sans-serif !important;
+	margin-left: 7px;
+	font-size: 20px;
+}
+.ui_info img{
+	width: 35px;
+}
+.subtitle{
+	
+	margin-top: 20px;
+	margin-left: 40px;
+}
+.subtitle p{
+
+	font-family:'Roboto', sans-serif !important;
+	font-weight: 300;
+	line-height: 30px;
+	
+}
+.ui_show{
+	
+	width: 700px;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	flex: 1;
+}
+.ui_show Iframe{
+	margin-top: 20px;
+	align-items: center;
+}
+.ui_show img{
+	width: 950px;
+	
+
+}
+.link_button{
+	align-items: center;
+	justify-content: center;
+	
+	width: 700px;
+	
+	display: flex;
+	flex: 1;
+}
+.link_button button{
+	width: 250px;
+	height: 50px;
+	align-items: center;
+	justify-content: center;
+}
+
+/* CSS */
+.button-39 {
+  position: absolute;
+  background-color: #FFFFFF;
+  border: 1px solid rgb(209,213,219);
+  border-radius: .5rem;
+  box-sizing: border-box;
+  color: #111827;
+  display: flex;
+  font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: .875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  padding: .75rem 1rem;
+  text-align: center;
+  text-decoration: none #D1D5DB solid;
+  text-decoration-thickness: auto;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.button-39 img{
+	margin-right: 15px;
+	width: 30px;
+}
+
+.button-39:hover {
+  background-color: rgb(249,250,251);
+}
+
+.button-39:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.button-39:focus-visible {
+  box-shadow: none;
+}
+
+a:link{
+	color: black;
+	text-decoration: none;
+}
+a:visited{
+	color: black;
+}
+.github{
+	position: absolute;
+	margin-top: 35px;	
+	width: 100px;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	flex: 1;
+}
+
+@media screen and (max-width: 400px) {
+	.offcanva1{
+		height: 100vh;
+		width: 100%;
+	}
+	.subtitle{
+		margin-left:30px;
+	}
+	.ui_show{
+		margin-top: 20px;
+		width: 100%;
+	}
+	.ui_show img{
+		width: 500px;
+	}
+	.ui_show img[alt="fivem"]{
+		width: 500px;
+	}
+	.link_button{
+		width: 100%;
+	}
+
+}
+@media screen and (max-width: 900px) {
+	.offcanva1{
+		height: 100vh;
+		width: 100%;
+	}
+	.subtitle{
+		margin-left:30px;
+	}
+	.ui_show{
+		margin-top: 20px;
+		width: 100%;
+	}
+	.ui_show img{
+		width: 700px;
+	}
+	.link_button{
+		width: 100%;
+	}
+	
+}
