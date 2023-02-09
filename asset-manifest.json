@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/terraexrth.github.io/static/css/main.1544b76e.css",
+    "main.js": "/terraexrth.github.io/static/js/main.8dba7a0f.js",
+    "static/js/787.f112c41a.chunk.js": "/terraexrth.github.io/static/js/787.f112c41a.chunk.js",
+    "static/media/profile_img.jpg": "/terraexrth.github.io/static/media/profile_img.e85de4c8ce13f86b3a24.jpg",
+    "index.html": "/terraexrth.github.io/index.html",
+    "main.1544b76e.css.map": "/terraexrth.github.io/static/css/main.1544b76e.css.map",
+    "main.8dba7a0f.js.map": "/terraexrth.github.io/static/js/main.8dba7a0f.js.map",
+    "787.f112c41a.chunk.js.map": "/terraexrth.github.io/static/js/787.f112c41a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1544b76e.css",
+    "static/js/main.8dba7a0f.js"
+  ]
+}
