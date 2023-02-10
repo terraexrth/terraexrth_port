@@ -148,6 +148,11 @@
 	
 
 }
+.ui_show img[alt="web"]{
+	margin-top: 50px;
+	width: 650px;
+}
+
 .link_button{
 	align-items: center;
 	justify-content: center;
@@ -204,6 +209,9 @@
 .button-39:focus-visible {
   box-shadow: none;
 }
+#web_btn .button-39{
+	margin-top: 120px;
+}
 
 a:link{
 	color: black;
@@ -239,6 +247,10 @@ a:visited{
 	}
 	.ui_show img[alt="fivem"]{
 		width: 500px;
+	}
+	.ui_show img[alt="web"]{
+		margin-top: 50px;
+		width: 350px;
 	}
 	.link_button{
 		width: 100%;
