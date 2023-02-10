@@ -52,12 +52,20 @@ const UIpage = () => {
               <div className="ui_show">
                 <img src="/image/mussek1.png" alt="" />
               </div>
+			  <a
+                  href="https://xd.adobe.com/view/e5d1dde3-389f-44ff-a0f9-9411325cfa35-b082/"
+                  target="_blank"
+                  rel="noreferrer"
+                > 
               <div className="link_button">
-                <button className="button-39">
-                  <img src="/image/adobexd.png" alt="" />
-                  <p>More Design</p>
-                </button>
+              
+                  <button className="button-39">
+                    <img src="/image/adobexd.png" alt="" />
+                    <p>More Design</p>
+                  </button>
+                
               </div>
+			  </a>
             </div>
           </div>
           <div className="blackpage fadein"></div>
@@ -134,7 +142,7 @@ const UIpage = () => {
               <a
                 href="https://www.figma.com/file/D8IojdcHma7wZK0TsbgpYF/FiveMUI?node-id=0%3A1&t=ngR4Ky1j6FtV3qHi-1"
                 target="_blank"
-				rel="noreferrer"
+                rel="noreferrer"
               >
                 <div className="link_button">
                   <button className="button-39" type="button">
