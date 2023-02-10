@@ -100,6 +100,7 @@ const UIpage = () => {
               <a
                 href="https://www.figma.com/proto/f0Vb40VxWkiB4L04INPgZ5/Museek-App?page-id=0%3A1&node-id=339%3A3&viewport=-338%2C227%2C0.24&scaling=scale-down&starting-point-node-id=339%3A2"
                 target="_blank"
+				rel="noreferrer"
               >
                 <div className="link_button">
                   <button className="button-39" type="button">
@@ -140,7 +141,7 @@ const UIpage = () => {
                 <img src="/image/fivem.png" alt="fivem" />
               </div>
               <a
-                href="https://www.figma.com/file/D8IojdcHma7wZK0TsbgpYF/FiveMUI?node-id=0%3A1&t=ngR4Ky1j6FtV3qHi-1"
+                href="https://www.figma.com/proto/D8IojdcHma7wZK0TsbgpYF/FiveMUI?page-id=0%3A1&node-id=1%3A1031&viewport=951%2C352%2C0.11&scaling=contain&starting-point-node-id=1%3A1031"
                 target="_blank"
                 rel="noreferrer"
               >
