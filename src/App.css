@@ -302,6 +302,12 @@ img.git_logo{
 		width: 20%;
 	}
 }
+@media screen and (orientation:landscape){
+	.rightContent{
+		height: 130vh;
+	}
+}
+
 
 
 

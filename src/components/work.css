@@ -270,10 +270,17 @@ a:visited{
 		width: 100%;
 	}
 	.ui_show img{
-		width: 700px;
+		width: 150%;
 	}
 	.link_button{
 		width: 100%;
 	}
 	
 }
+@media screen and (orientation:landscape) {
+	.ui_show img{
+		width: 100%;
+	}
+}
+	
+
