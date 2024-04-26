@@ -22,9 +22,13 @@ body{
 	font-size: 25px;
 	font-weight: 300;
 }
+.port_text{
+	margin-bottom: 40px;
+}
 .profile_text{
 	display: flex;
 	flex: 1;
+	width: 90%;
 }
 .profile_text p{
 	width: 80%;
@@ -246,8 +250,12 @@ img.git_logo{
 	}
 	
 }
+.App.portrait {
+	pointer-events: none; /* Disable pointer events for all elements */
+  }
 
-@media screen and (max-width: 900px) {
+
+@media screen and (max-width: 950px) {
 	.profileimg{
 		width: 270px;
 		margin-left: 5px;
@@ -262,11 +270,13 @@ img.git_logo{
 		
 	}
 	.rightContent{
-		height: 50vh;
+		height: 120vh;
+    width: 90%;
 	
 	}
 	.container{
 		display: block;
+		
 	}
 	.menubar{
 		width: 70%;

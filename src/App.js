@@ -1,17 +1,34 @@
-import { useState } from "react";
-
+import { useState, useEffect } from "react";
 
 import "./App.css";
-import Androidpage from "./components/Androidpage";
-import Etcpage from "./components/Etcpage";
-import Htmlpage from "./components/Htmlpage";
-import UIpage from "./components/UIpage";
+import Androidpage from "./pages/Androidpage";
+import Etcpage from "./pages/Etcpage";
+import Htmlpage from "./pages/Htmlpage";
+import UIpage from "./pages/UIpage";
+import Modal from "./modal/Modal";
 
 function App() {
   const [isUiActive, setUiActive] = useState(true);
   const [isHtmlActive, setHtmlActive] = useState(false);
   const [isAndroidActive, setAndroidActive] = useState(false);
   const [isEtcActive, setEtcActive] = useState(false);
+  const [isPortraitModalOpen, setIsPortraitModalOpen] = useState(false);
+
+
+  useEffect(() => {
+    const handleOrientationChange = () => {
+
+     setIsPortraitModalOpen(window.innerWidth < window.innerHeight);
+    };
+
+    window.addEventListener("orientationchange", handleOrientationChange);
+
+    handleOrientationChange(); // Check initial orientation
+
+    return () => {
+      window.removeEventListener("orientationchange", handleOrientationChange);
+    };
+  }, []);
 
   const toggleUi = () => {
     setUiActive(true);
@@ -38,12 +55,8 @@ function App() {
     setEtcActive(true);
   };
 
-
-
   return (
-	
     <div className="App">
-	
       <header className="App-header">
         <div className="container">
           <div className="leftContent">
@@ -51,37 +64,66 @@ function App() {
               terraexrth <span>🌍</span>
             </h1>
             <p className="port_text">portfolio.</p>
-			<div className="profileimg"></div>
             <div className="profile_text">
               <h1>Jirapat Chunskul</h1>
             </div>
-			<div className="profile_text">
-				<p>I'm a student from Khonkaen University's College of Computing, and I'm interested in UX/UI design.</p>
-			</div>
-			<div className="profile_text">
-				<h1>Skills</h1>
-			</div>
-			<div className="profile_text" >
-				<ul className="skill">
-					<li>Figma</li>
-					<li>AdobeXD</li>
-					<li>Photoshop</li>
-					<li>HTML/CSS</li>
-					<li>React</li>
-					<li>Kotlin & Java<span>(for android development)</span></li>
-				</ul>
-			</div>
-			<div className="profile_text" style={{marginTop:30}}>
-				<h1>Contact</h1>
-			</div>
-			<div className="profile_text">
-				<ul className="contact">
-					<li><img src="/image/email.png" alt="" /> jirapat.ch@kkumail.com</li>
-					<li><img src="/image/telephone.png" alt="" />+66968158260</li>
-					<a href="https://linktr.ee/terraexrth" target="_blank"  rel="noreferrer"><li><img src="/image/link.png" alt="" />linktr.ee/terraexrth</li></a>
-					
-				</ul>
-			</div>
+            <div className="profile_text">
+              <p>
+                I'm a fresh graduate from Computer Science College of Computing,
+                Khon Kaen University. I'm interested in Web and Mobile
+                Development
+              </p>
+            </div>
+            <div className="profile_text">
+              <h1>Tech Stack</h1>
+            </div>
+            <div className="profile_text">
+              <ul className="skill">
+                <li>ReactJS</li>
+                <li>NodeJs (Express.JS)</li>
+                <li>MUI</li>
+                <li style={{ display: "block" }}>MongoDB & Firebase</li>
+
+                <li>
+                  Kotlin, Java,React Native, Expo<span>(for android development)</span>
+                </li>
+              </ul>
+            </div>
+            <div className="profile_text">
+              <h1>Tools</h1>
+            </div>
+            <div className="profile_text">
+              <ul className="skill" style={{ marginBottom: 20 }}>
+                <li style={{ display: "block" }}>Postman & Thunder Client</li>
+                <li style={{ display: "block" }}>Git</li>
+                <li style={{ display: "block" }}>Figma & XD</li>
+                <li style={{ display: "block" }}>Photoshop</li>
+              </ul>
+            </div>
+            <div className="profile_text" style={{ marginTop: 30 }}>
+              <h1>Contact</h1>
+            </div>
+            <div className="profile_text">
+              <ul className="contact">
+                <li>
+                  <img src="/image/email.png" alt="" /> jirapat.ch@kkumail.com
+                </li>
+                <li>
+                  <img src="/image/telephone.png" alt="" />
+                  +66968158260
+                </li>
+                <a
+                  href="https://linktr.ee/terraexrth"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <li>
+                    <img src="/image/link.png" alt="" />
+                    linktr.ee/terraexrth
+                  </li>
+                </a>
+              </ul>
+            </div>
           </div>
           <div className="rightContent">
             <div className="workpanel">
@@ -93,44 +135,54 @@ function App() {
                 </svg>
                 <p id="favor">Favorite</p>
                 <div className="menucontainer">
-                  <div className={isUiActive? "choice active":"choice"} onClick={toggleUi}>
+                  <div
+                    className={isUiActive ? "choice active" : "choice"}
+                    onClick={toggleUi}
+                  >
                     <span>
                       <img src="/image/file.png" alt="file_icon" />
                     </span>{" "}
-                    <p>UI Design</p> 
+                    <p>UI Design</p>
                   </div>
-                  <div className={isHtmlActive? "choice active":"choice"} onClick={toggleHtml}>
+                  <div
+                    className={isHtmlActive ? "choice active" : "choice"}
+                    onClick={toggleHtml}
+                  >
                     <span>
                       <img src="/image/html.png" alt="file_icon" />
                     </span>{" "}
-                   <p>HTML/CSS</p> 
+                    <p>Web Dev</p>
                   </div>
-                  <div className={isAndroidActive? "choice active":"choice"} onClick={toggleAndroid}>
+                  <div
+                    className={isAndroidActive ? "choice active" : "choice"}
+                    onClick={toggleAndroid}
+                  >
                     <span>
                       <img src="/image/android.png" alt="file_icon" />
                     </span>{" "}
-                    <p>Android</p> 
+                    <p>Android</p>
                   </div>
-                  <div className={isEtcActive? "choice active":"choice"} onClick={toggleEtc}>
+                  <div
+                    className={isEtcActive ? "choice active" : "choice"}
+                    onClick={toggleEtc}
+                  >
                     <span>
                       <img src="/image/ellipsis.png" alt="file_icon" />
                     </span>{" "}
                     <p>ETC</p>
                   </div>
-				  
                 </div>
               </div>
             </div>
-            
-              {isUiActive ? <UIpage/> : null}
-              {isHtmlActive ? <Htmlpage/> : null}
-              {isAndroidActive ? <Androidpage/> : null}
-              {isEtcActive ? <Etcpage/> : null}
 
-            
+            {isUiActive ? <UIpage /> : null}
+            {isHtmlActive ? <Htmlpage /> : null}
+            {isAndroidActive ? <Androidpage /> : null}
+            {isEtcActive ? <Etcpage /> : null}
           </div>
         </div>
       </header>
+      {isPortraitModalOpen && <Modal />}
     </div>
   );
 }

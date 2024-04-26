@@ -16,6 +16,8 @@ const Htmlpage = () => {
   };
   return (
     <>
+
+
       <div className="workshop test">
           <div className="wrk1" onClick={offcanva1toggle}>
             <div className="github">
@@ -24,34 +26,16 @@ const Htmlpage = () => {
             <img src="./image/folder.png" alt="" />
             <span>College Of Computing</span>
           </div>
-        
-        <a
-          href="https://mobileweb-a36af.web.app/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <div className="wrk1">
+		  <a href="https://youtu.be/QXZUkACCU7w" target="_blank" rel="noreferrer">
+		  <div className="wrk1" onClick={offcanva1toggle}> 
             <div className="github">
               <img className="git_logo" src="./image/html_black.png" alt="" />
             </div>
             <img src="./image/folder.png" alt="" />
-            <span>Web Application</span>
+            <span>Graduation Verification System</span>
           </div>
-        </a>
-
-        <a
-          href="http://202.28.94.18/wdt64/cs/sec1/633020033-2/html/index.html"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <div className="wrk1">
-            <div className="github">
-              <img className="git_logo" src="./image/html_black.png" alt="" />
-            </div>
-            <img src="./image/folder.png" alt="" />
-            <span>Portfolio (draft1)</span>
-          </div>
-        </a>
+		  </a>
+		 
       </div>
 
 	  {isOffcanva1Active ? (
