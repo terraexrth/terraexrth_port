@@ -15,20 +15,7 @@ function App() {
   const [isPortraitModalOpen, setIsPortraitModalOpen] = useState(false);
 
 
-  useEffect(() => {
-    const handleOrientationChange = () => {
-
-     setIsPortraitModalOpen(window.innerWidth < window.innerHeight);
-    };
-
-    window.addEventListener("orientationchange", handleOrientationChange);
-
-    handleOrientationChange(); // Check initial orientation
-
-    return () => {
-      window.removeEventListener("orientationchange", handleOrientationChange);
-    };
-  }, []);
+  
 
   const toggleUi = () => {
     setUiActive(true);
@@ -182,7 +169,6 @@ function App() {
           </div>
         </div>
       </header>
-      {isPortraitModalOpen && <Modal />}
     </div>
   );
 }

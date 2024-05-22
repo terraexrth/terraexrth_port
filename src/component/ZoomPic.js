@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./ZoomPic.css";
 
-const ZoomPic = ({ imgUrl,width }) => {
+const ZoomPic = ({ imgUrl, width }) => {
   const [scale, setScale] = useState(1);
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
@@ -12,11 +12,11 @@ const ZoomPic = ({ imgUrl,width }) => {
   };
 
   const handleZoomOut = () => {
-   const newScale = scale - 0.1
+    const newScale = scale - 0.1;
 
-	if(newScale >=1.0){
-		setScale(newScale)
-	}
+    if (newScale >= 1.0) {
+      setScale(newScale);
+    }
   };
 
   useEffect(() => {
@@ -63,7 +63,7 @@ const ZoomPic = ({ imgUrl,width }) => {
         borderRadius: "10px",
         position: "relative",
         overflow: "hidden",
-		marginBottom:'10px',
+        marginBottom: "10px",
       }}
     >
       <div className="btn-container">
@@ -75,20 +75,23 @@ const ZoomPic = ({ imgUrl,width }) => {
         </button>
       </div>
 
-      <img
-        alt=""
-        ref={imageRef}
-        style={{
-          width: width,
-          height: "auto",
-          cursor: "move",
-          transform: `scale(${scale}) translate(${position.x}px, ${position.y}px)`,
-        }}
-        src={
-         imgUrl
-        }
-        draggable={false}
-      />
+      {imgUrl && (
+        <img
+          alt=""
+          ref={imageRef}
+          className="zoom-pic"
+          style={{
+            width: width,
+            height: "auto",
+            cursor: "move",
+            transform: `scale(${scale}) translate(${position.x}px, ${position.y}px)`,
+          }}
+          src={imgUrl}
+          draggable={false}
+        />
+      )}
+
+      {imgUrl && <img alt="preview" className="preview_pic" src={imgUrl} />}
     </div>
   );
 };

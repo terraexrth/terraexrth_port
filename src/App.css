@@ -248,11 +248,12 @@ img.git_logo{
 	.workpanel{
 		width: 20%;
 	}
+	.workshop{
+		height: 100%;
+	}
 	
 }
-.App.portrait {
-	pointer-events: none; /* Disable pointer events for all elements */
-  }
+
 
 
 @media screen and (max-width: 950px) {
@@ -270,8 +271,8 @@ img.git_logo{
 		
 	}
 	.rightContent{
-		height: 120vh;
-    width: 90%;
+		height: 100%;
+    width: 100%;
 	
 	}
 	.container{
@@ -310,6 +311,9 @@ img.git_logo{
 	}
 	.workpanel{
 		width: 20%;
+	}
+	.workshop{
+		height: 100%;
 	}
 }
 

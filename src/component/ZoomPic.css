@@ -18,4 +18,26 @@ button{
 	padding: 10px;
 	cursor: pointer;
 }
+.preview_pic{
+	display: none;
+	height:100%;
+	max-width: 100%;
+}
 
+@media screen and (max-width: 400px){
+	.zoom-pic{
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 950px) {
+	.btn-container{
+		display: none;
+	}
+	.zoom-pic{
+		display: none;
+	}
+	.preview_pic{
+		display: block;
+	}
+}

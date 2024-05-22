@@ -25,14 +25,7 @@ const Museek1 = () => {
 	<>
 	
     <div
-      style={{
-        width: "100%",
-        height: "80vh",
-        display: "flex",
-        flexDirection: "row",
-      }}
-    >
-		
+     className="ui_preview">
       <div
         className="picList"
         style={{

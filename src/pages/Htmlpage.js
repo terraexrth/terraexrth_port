@@ -35,6 +35,15 @@ const Htmlpage = () => {
             <span>Graduation Verification System</span>
           </div>
 		  </a>
+		  <a href="https://github.com/terraexrth/Gloom" target="_blank" rel="noreferrer">
+		  <div className="wrk1" onClick={offcanva1toggle}> 
+            <div className="github">
+              <img className="git_logo" src="./image/html_black.png" alt="" />
+            </div>
+            <img src="./image/folder.png" alt="" />
+            <span>Gloom</span>
+          </div>
+		  </a>
 		 
       </div>
 
